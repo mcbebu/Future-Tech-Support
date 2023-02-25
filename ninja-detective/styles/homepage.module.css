@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.backpage {
+    width: 100%;
+    height: 500px;
+    object-fit:contain;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+
+.container {
+    min-height: 100vh;
+    min-width:100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .header {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+  }
+
+.backImage{
+    position:relative;
+  }
+
+  .bodypage{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+
+  .textHeader{
+    box-sizing:border-box;
+    position:absolute;
+    left: 200px; 
+    width: 30%;
+    font-size: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: baseline;
+    top: 2em;
+    font-family:'Nunito', sans-serif;
+  } 
+
+  .textText{
+    position:absolute;
+    left: 150px; 
+    top: 6em;
+    width: 30%;
+    font-size: 35px;
+    font-family:'Nunito', sans-serif;
+    text-align: center;
+  }
+
+  .logo{
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .buttonLogin {
+    background-color: #eb1e1e;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top: 35em;
+    left: 150px;
+    position: absolute;
+  }
+
+  .buttonsignup {
+    background-color: #eb1e1e;
+    border-radius: 10%;
+    border: none;
+    color: white;
+    padding: 20px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    top: 35em;
+    left: 150px;
+    position: absolute;
+  }
