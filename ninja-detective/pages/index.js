@@ -1,6 +1,8 @@
-import Image from 'next/image'
-import logoImage from '../public/images/ninjavan-logo-white.png'
-import styles from '../styles/homepage.module.css'
+import Image from 'next/image';
+import Link from 'next/link';
+import logoImage from '../public/images/ninjavan-logo-white.png';
+import bgImage from '../public/images/background-image.jpg';
+import styles from '../styles/homepage.module.css';
 
 export default function Home() {
     return (
@@ -10,17 +12,15 @@ export default function Home() {
                     <Image className={styles.logo} src={logoImage}></Image>
                 </div>
 
-                <div className={styles.bodypage}>
+                <div className={styles.bodyPage}>
                     <div className={styles.backImage}>
                         <h1 className={styles.textHeader}>Ninja Detective</h1>
-                        <p className={styles.textText}>Worried About your shipment? Say Goodbye to your problems with this one stop tracking service</p>
-                        <img src='https://www.ninjavan.co/static/44271b1532932864d5386bc6904280d0/878dd/homepage-banner-desktop.png'></img>
+                        <p className={styles.textDescription}>Worried About your shipment? Say Goodbye to your problems with this one stop tracking service</p>
                     </div>
-                    <div className={styles.buttons}>
-                        <input type="button" className={styles.buttonLogin} value="Log in"></input>
-                        <input type="button" className={styles.buttonsignup} value="Sign Up"></input>
-                    </div>
+                    <Image className={styles.bgImage} src={bgImage}></Image>
 
+                    <a href='/login'><input type="button" className={styles.buttonLogin} value="Existing User"></input></a>
+                    <input type="button" className={styles.buttonsignup} value="Create an Account"></input>
                 </div>
 
                 <div className={styles.footer}>

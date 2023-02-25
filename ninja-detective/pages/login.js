@@ -24,7 +24,7 @@ function LoginPage() {
                     </div>
 
                     <div className={styles.loginButton}>
-                        <input className={styles.loginButtonText} type="submit" value="LOGIN" />
+                        <a href="/dashboard"><input className={styles.loginButtonText} type="submit" value="LOGIN" /></a>
                         <svg className={styles.loginButtonIcon} xmlns="http://www.w3.org/2000/svg" width="29.016" height="29.016" viewBox="0 0 29.016 29.016">
                             <g id="Group_5" data-name="Group 5" transform="translate(0)">
                                 <g id="Group_4" data-name="Group 4">

@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.container {
+  min-height: 100vh;
+  min-width: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.header {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  padding: 1em;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+}
