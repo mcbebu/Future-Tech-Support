@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+.container {
+  padding: 0 0rem;
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+}
+
+.main {
+  margin: 0rem 0;
+  flex: 1;
+  max-width: 70%;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  box-shadow: 0 0 10px #ccc;
+  padding: 2em;
+}
+
+.login {
+  background-color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+}
+
+.sideImage {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageSize {
+  object-fit: contain;
+  width: 80%;
+  height: 80%;
+}
+
+.logoImage {
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.imageWrapper {
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+/* .loginImageText {
+  color: white;
+  font-size: 48px;
+  padding: 0px 10px 0px 10px;
+} */
+
+/* .logoContainer {
+  max-height: 400px;
+  position: relative;
+} */
+
+.loginLabel {
+  font-weight: 700;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+/* .loginForm {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+} */
+
+.loginInput {
+  background-color: #fbfbfb;
+  font-size: 18px;
+  min-height: 40px;
+  padding: 10px;
+  width: 100%;
+  border: 2px solid #b4b2b2;
+  border-radius: 5px;
+  font-family: "Nunito", sans-serif;
+}
+
+/* .errorMessage {
+  color: red;
+  align-self: flex-end;
+} */
+
+.successMessage {
+  color: #0c9808;
+  align-self: flex-end;
+}
+
+.forgetPasswordLink {
+  align-self: flex-end;
+  padding: 0px 0px 0px 0px;
+  color: #0372bc;
+  margin-top: 1em;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.loginButtonText {
+  background: white;
+  border: none;
+  align-self: flex-end;
+  margin: 20px 10px 20px 10px;
+  font-weight: 900;
+  font-size: 20px;
+  color: #707070;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+
+.loginButtonIcon {
+  transform: scaleX(-1);
+}
+
+.forgotPasswordText {
+  color: #707070;
+  font-size: 18px;
+  margin-bottom: 1em;
+}
+
+.forgotPasswordButton {
+  background-color: #4189f3;
+  font-size: 15px;
+  color: white;
+  border: 0;
+  min-height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Nunito", sans-serif;
+}
+
+.backtoLoginButton {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  color: #707070;
+}
+
+.backButtonText {
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.signUpLink {
+    margin-top: 1em;
+}
