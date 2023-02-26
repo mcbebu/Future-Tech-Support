@@ -20,6 +20,7 @@
 
 .bodyPage {
   width: 100%;
+  background-color: black;
 }
 
 .bgImage {
@@ -33,15 +34,6 @@
   margin-top: 5em;
   margin-left: 10em;
 }
-/* .bodypage {
-  box-sizing: border-box;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 1em;
-  margin-bottom: 2em;
-} */
 
 .backImage {
   position: relative;
@@ -107,4 +99,13 @@
   left: 400px;
   position: absolute;
   font-family: "Nunito", sans-serif;
+}
+
+.footer {
+  background-color: black;
+  min-height: 235px;
+  padding-top: 0.5em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

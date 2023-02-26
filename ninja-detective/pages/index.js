@@ -1,8 +1,11 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import logoImage from '../public/images/ninjavan-logo-white.png';
 import bgImage from '../public/images/background-image.jpg';
 import styles from '../styles/homepage.module.css';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import { CardActionArea } from '@mui/material';
 
 export default function Home() {
     return (
@@ -24,7 +27,42 @@ export default function Home() {
                 </div>
 
                 <div className={styles.footer}>
-                    <h1>footer</h1>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    Any Issues?
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Send us a ticket and we will look into it right away!
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    All in One
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Your one stop shop for anything customers related issues.
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                    <Card sx={{ maxWidth: 345 }}>
+                        <CardActionArea>
+                            <CardContent>
+                                <Typography gutterBottom variant="h5" component="div">
+                                    New features coming soon
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Translation and Chat with live agent are coming...
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
                 </div>
             </main>
         </div>
