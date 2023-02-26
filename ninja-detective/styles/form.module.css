@@ -18,20 +18,6 @@
   margin-top: 0.5em;
 }
 
-/* .miniContainer {
-  width: 200px;
-  background-color: white;
-  margin: auto;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  padding: 10px;
-}
-
-.submitText {
-  font-size: 16px;
-  font-family: "Nunito", sans-serif;
-  color: black;
-} */
-
 .registerForm {
   display: flex;
   flex-direction: column;
@@ -50,8 +36,9 @@
   margin: 10px 0 10px 0;
   padding: 15px;
   font-size: 16px;
-  color: white;
+  color: black;
   border: 0;
+  font-family: "Nunito", sans-serif;
 }
 
 .button {
