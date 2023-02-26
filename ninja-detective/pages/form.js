@@ -1,10 +1,12 @@
-import react, { use, useState } from "react";
+import * as React from 'react';
 import Image from 'next/image'
 import logoImage from '../public/images/ninjavan-logo-white.png'
 import homepage from '../styles/homepage.module.css'
 import styles from '../styles/form.module.css'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Button } from "@mui/material";
+import SnackBar from '@mui/material/SnackBar';
+import MuiAlert from '@mui/material/Alert';
 import Link from "next/link";
 
 const theme = createTheme({
@@ -15,8 +17,12 @@ const theme = createTheme({
     }
 });
 
+const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 export default function App() {
-    const [values, setValues] = useState({
+    const [values, setValues] = React.useState({
         issuetype: "",
         subject: "",
         desc: "",
@@ -24,6 +30,7 @@ export default function App() {
         attach: "",
 
     });
+    const [open, setOpen] = React.useState(false);
 
     const handleIssueTypeInputChange = (event) => {
         setValues({ ...values, issuetype: event.target.value })
@@ -45,11 +52,28 @@ export default function App() {
         setValues({ ...values, attach: event.target.value })
     }
 
-    const [submitted, setSubmitted] = useState(false);
+    const [submitted, setSubmitted] = React.useState(false);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    const sendMessage = (e) => {
+        e.preventDefault();
         setSubmitted(true);
+        setTimeout(() =>{
+            setOpen(true);
+            // <SnackBar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} autoHideDuration={6000} onClose={handleClose}>
+            //     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+            //         Your Ticket has been picked up by our team!!
+            //     </Alert>
+            // </SnackBar>
+       }, 5000);
     }
 
     return (
@@ -58,7 +82,7 @@ export default function App() {
                 <Image className={homepage.logo} src={logoImage}></Image>
             </div>
             <div className={styles.formContainer}>
-                <form className={styles.registerForm} onSubmit={handleSubmit}>
+                <form className={styles.registerForm} onSubmit={sendMessage}>
                     {submitted ? <div className={styles.successMessage}>Ticket created</div> : null}
                     <br></br>
                     <h1>Create a ticket</h1><br></br>
@@ -97,16 +121,21 @@ export default function App() {
                         value={values.attach}
                         className={styles.formField}
                         name="attach" />
-
+                    <br/>
                     <div className={styles.button}>
                         <ThemeProvider theme={theme}>
                             <Link href='/dashboard'>
                                 <Button variant="contained" color="secondary" size="medium">
                                     Cancel
                                 </Button></Link>
-                            <Button variant="contained" color="success" type="submit" size="medium">
+                            <Button variant="contained" color="success" type="submit" size="medium" onClick={sendMessage}>
                                 Submit
                             </Button>
+                            <SnackBar open={open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={6000} onClose={handleClose}>
+                                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                                    Your Ticket has been picked up by our team!!
+                                </Alert>
+                            </SnackBar>
                         </ThemeProvider>
                     </div>
                 </form>
